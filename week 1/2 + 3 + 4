@@ -3,3 +3,6 @@ it receives five years of security updates, making it suitable for reliable serv
 which allows it to run efficiently in a virtualised environment such as VirtualBox. Compared to alternatives like Debian, which uses older packages,
 and CentOS Stream, which follows a rolling-release model, Ubuntu Server provides a balanced combination of up-to-date software, stability, and strong community support, 
 making it an appropriate choice for this system.
+
+The virtual machines were configured in Oracle VirtualBox using Network Address Translation (NAT) to provide internet access for system updates and software installation.
+IP addresses were assigned automatically via DHCP within the VirtualBox NAT network. 
