@@ -1,0 +1,36 @@
+Performance testing will be conducted through remote monitoring using Secure Shell (SSH) access from the workstation to the server. System performance metrics including CPU usage, 
+memory utilisation, disk space, and network configuration will be monitored using standard Linux command-line tools such as top, free -h, df -h, and ip addr.
+Monitoring will be performed during normal system operation and routine administrative tasks to assess baseline performance. 
+
+SSH Hardening
+Disable direct root login over SSH
+Enforce SSH key-based authentication
+Change default SSH configuration to limit access
+Firewall Configuration
+Enable UFW firewall
+Allow only required ports (e.g. SSH)
+Deny all other incoming connections by default
+Mandatory Access Control
+Apply default or service-specific security profiles
+Automatic Updates
+Enable unattended security updates
+Regularly apply system and security patches
+User Privilege Management
+Use non-root user accounts for administration
+Grant administrative access via sudo only
+Network Security
+Limit network exposure by using NAT or Host-only networking
+Monitor network interfaces for unauthorised changes
+
+One potential threat is unauthorised access through brute-force attacks targeting the SSH service.
+If successful, an attacker could gain access to the server and compromise system data or services. 
+This risk can be mitigated by disabling root login, enforcing SSH key-based authentication, using strong passwords,
+and limiting login attempts through tools such as Fail2Ban.
+
+An unpatched operating system presents a security risk, as attackers may exploit known vulnerabilities in outdated software.
+This could lead to privilege escalation or remote code execution. Mitigation includes enabling automatic security updates,
+regularly applying patches, and monitoring system update status to ensure the server remains protected against known exploits.
+
+Improper firewall configuration or unnecessary open network ports can expose the server to network-based attacks.
+This may allow unauthorised access or increase the attack surface. The risk can be reduced by enabling a firewall, 
+allowing only essential services such as SSH, blocking all other inbound traffic by default, and regularly reviewing firewall rules.
