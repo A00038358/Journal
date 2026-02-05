@@ -1,0 +1,5 @@
+Ubuntu Server 22.04 LTS was chosen as the server operating system due to its stability, security, and long-term support. As an LTS release, 
+it receives five years of security updates, making it suitable for reliable server deployment. Ubuntu Server has low resource requirements, 
+which allows it to run efficiently in a virtualised environment such as VirtualBox. Compared to alternatives like Debian, which uses older packages,
+and CentOS Stream, which follows a rolling-release model, Ubuntu Server provides a balanced combination of up-to-date software, stability, and strong community support, 
+making it an appropriate choice for this system.
