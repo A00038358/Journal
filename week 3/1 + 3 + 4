@@ -1,0 +1,23 @@
+Workload Type         	Application          	Justification
+CPU-intensive	       stress or sysbench cpu	  Can generate high CPU load for testing processing capability
+RAM-intensive      	stress or memtester	      Tests memory usage limits under load
+I/O-intensive	      fio or dd	              Simulates heavy disk read/write activity
+Network-intensive 	iperf3	                Tests network throughput and latency
+Server application	 nginx	                Represents a real server workload for web requests
+
+Application	CPU	RAM	Disk I/O	Network
+stress CPU	High	Low	Low	None
+memtester	Low	High	Low	None
+fio	Low	Low	High	None
+iperf3	Low	Low	Low	High
+nginx	Medium	Medium	Medium	Medium
+
+Performance monitoring of each application will be conducted remotely via SSH on the Ubuntu Server.
+The approach for each workload type is as follows:
+
+CPU-intensive applications (e.g., stress, sysbench cpu) will be monitored using top or htop to track CPU utilisation and identify peaks.
+RAM-intensive applications (e.g., memtester) will be observed with free -h and vmstat to measure memory consumption and swap usage.
+I/O-intensive applications (e.g., fio) will be monitored using iostat, df -h, and dstat to assess read/write performance and disk usage.
+Network-intensive applications (e.g., iperf3) will be monitored via ip -s link, ifstat, or the application’s built-in throughput reporting to measure network bandwidth and latency.
+Server applications (e.g., nginx) will be monitored using a combination of CPU, memory, disk, and network metrics to capture overall resource utilisation during simulated client requests.
+Monitoring will be performed at regular intervals during normal operation and under simulated workload conditions. The results will be logged. 
